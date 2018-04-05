@@ -24,9 +24,13 @@ if [ -d /data/worlds/world -a "$ICONS" = "true" ]; then
 	if [ ! -d /data/output/static/markers/image ]; then
 		mkdir /data/output/static/markers/image
 	fi
+	if [ ! -d /data/output/static/markers/social ]; then
+		mkdir /data/output/static/markers/social
+	fi
 	cp -r /data/icons/action/2x_web/*48dp.png /data/output/static/markers/action/
 	cp -r /data/icons/maps/2x_web/*48dp.png /data/output/static/markers/maps/
 	cp -r /data/icons/image/2x_web/*48dp.png /data/output/static/markers/image/
+	cp -r /data/icons/social/2x_web/*48dp.png /data/output/static/markers/social/
 	printf "Complete.\n"
 else
 	printf "World folder does not exist!"
